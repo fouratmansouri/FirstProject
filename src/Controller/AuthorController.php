@@ -15,7 +15,7 @@ class AuthorController extends AbstractController
             'name' => $name
         ]);
     }
-    #[Route('/author/list',name:'app_list')]
+    #[Route('/author/list',name: 'app_list')]
     public function list(){
         $authors = array(
             array('id' => 1, 'picture' => '/images/Victor-Hugo.jpg','username' => 'Victor Hugo', 'email' =>
@@ -25,7 +25,6 @@ class AuthorController extends AbstractController
             array('id' => 3, 'picture' => '/images/Taha_Hussein.jpg','username' => 'Taha Hussein', 'email' =>
             'taha.hussein@gmail.com', 'nb_books' => 300)
             );
-            return $this->render('author/list.html.twig');
-
+            return $this->render('author/list.html.twig',['authors'=>$authors]);
     }
 }

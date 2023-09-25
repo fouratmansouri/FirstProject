@@ -1,1 +1,22 @@
-<img src="{{asset('images/Taha_Hussein.jpg')}}">
+{#<img src="{{asset('images/Taha_Hussein.jpg')}}">#}
+<table border="1">
+{% for author in authors %}
+<tr>
+<td>
+{{author.id}}
+</td>
+<td>
+<img src="{{asset(author.picture)}}">
+</td>
+<td>
+{{author.username}}
+</td>
+<td>
+{{author.email}}
+</td>
+<td>
+{{author.nb_books}}
+</td>
+</tr>
+{% endfor %}
+</table>
